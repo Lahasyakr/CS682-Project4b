@@ -4,7 +4,7 @@
   "description": "atsign - project-4b",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha 'test/**/**/*.js'"
   },
   "repository": {
     "type": "git",

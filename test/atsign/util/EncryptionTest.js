@@ -1,4 +1,4 @@
-var EncryptionUtil = require("../at_client/src/util/EncryptionUtil");
+var EncryptionUtil = require("../../../atsign/src/util/EncryptionUtil");
 var expect    = require("chai").expect;
 
 
