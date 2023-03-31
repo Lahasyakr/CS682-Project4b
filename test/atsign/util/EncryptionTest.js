@@ -22,7 +22,7 @@ describe("Base64EncodeDecode Testing", function () {
 });
 
 describe("AES Encrypt Decrypt testing", function () {
-  describe("AES Encrypt testing", function () {
+  describe("AES Encryption testing", function () {
     it("Returns an Encrypted string", function () {
       encodeData = EncryptionUtil.aesEncryptToBase64(
         "Testing AES Encoded Data",
