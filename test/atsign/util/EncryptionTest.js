@@ -21,9 +21,9 @@ describe("Base64EncodeDecode Testing", function () {
   });
 });
 
-describe("AES EncodeDecode testing", function () {
-  describe("AES encode testing", function () {
-    it("Returns an encoded string", function () {
+describe("AES Encrypt Decrypt testing", function () {
+  describe("AES Encrypt testing", function () {
+    it("Returns an Encrypted string", function () {
       encodeData = EncryptionUtil.aesEncryptToBase64(
         "Testing AES Encoded Data",
         "7KgXQdb4xGSRG5serDpQt7nh2yxukGpNwa+ZMJsO31Y=",
@@ -32,6 +32,52 @@ describe("AES EncodeDecode testing", function () {
 
       expect(encodeData).to.equal(
         "UwnDu8KURMOYw4YCw7obw7nDgxU+w6Qrw6MRfjLCkDJ3SQ=="
+      );
+    });
+  });
+
+  describe("AES Decryption testing", function () {
+    it("Returns an decrypted text", function () {
+      let reqData = EncryptionUtil.generateAESKeyBase64();
+      let key = reqData[0]
+      let text = "Testing AES Encryption and Decryption of Data";
+      let iv = reqData[1]
+      //Encrypting text
+      encryptedData = EncryptionUtil.aesEncryptToBase64(
+        text,
+        key,
+        iv
+      );
+      // testing the AES Decryption -> Decrypting the encryptedData
+      decryptedData = EncryptionUtil.aesDecryptFromBase64(
+        encryptedData, key, iv
+      );
+
+      expect(decryptedData).to.equal(
+        text
+      );
+    });
+  });
+
+  describe("AES decryption testing - for string with special characters", function () {
+    it("Returns an decrypted text", function () {
+      let reqData = EncryptionUtil.generateAESKeyBase64();
+      let key = reqData[0]
+      let text = "Hello! ... CS682 Project-4b =>Testing Data";
+      let iv = reqData[1]
+      //Encrypting text
+      encryptedData = EncryptionUtil.aesEncryptToBase64(
+        text,
+        key,
+        iv
+      );
+      // testing the AES Decryption -> Decrypting the encryptedData
+      decryptedData = EncryptionUtil.aesDecryptFromBase64(
+        encryptedData, key, iv
+      );
+
+      expect(decryptedData).to.equal(
+        text
       );
     });
   });

@@ -1,3 +1,5 @@
+const crypto = require("crypto");
+
 module.exports = {
   base64Encode: base64Encode,
   base64Decode: base64Decode,
@@ -7,6 +9,7 @@ module.exports = {
   verifying: verifying,
   generateAESKeyBase64: generateAESKeyBase64,
   aesEncryptToBase64: aesEncryptToBase64,
+  aesDecryptFromBase64: aesDecryptFromBase64
 };
 function base64Encode(data) {
   let bufferObj = Buffer.from(data, "utf8");
@@ -23,7 +26,7 @@ function base64Decode(data) {
 }
 
 //RSA KeyPair Generation
-const crypto = require("crypto");
+
 function generateRSAKeyPair() {
   return ({ publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     modulusLength: 2048,
@@ -82,11 +85,6 @@ function generateAESKeyBase64() {
   ];
 }
 
-// TODO: aes decryption
-function aesDecryptFromBase64() {
-  cipherTextBase64, keyBase64;
-}
-
 function aesEncryptToBase64(clearText, keyBase64, iv) {
   const key = Buffer.from(keyBase64, "base64");
   const initializationVector = Buffer.from(iv, "base64");
@@ -98,4 +96,18 @@ function aesEncryptToBase64(clearText, keyBase64, iv) {
   let encrypted = cipher.update(clearText, "utf8", "binary");
   encrypted += cipher.final("binary");
   return base64Encode(encrypted);
+}
+
+
+//  aes decryption
+function aesDecryptFromBase64(cipherTextBase64, keyBase64, iv) {
+  const key = Buffer.from(keyBase64, "base64");
+  const initializationVector = Buffer.from(iv, "base64");
+  const decipher = crypto.createDecipheriv(
+    'aes-256-ctr',
+    key,
+    initializationVector);;
+  const clearText = base64Decode(cipherTextBase64)
+  let decryptedData = decipher.update(clearText, 'binary') + decipher.final();
+  return decryptedData;
 }
