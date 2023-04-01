@@ -9,7 +9,7 @@ module.exports = {
   verifying: verifying,
   generateAESKeyBase64: generateAESKeyBase64,
   aesEncryptToBase64: aesEncryptToBase64,
-  aesDecryptFromBase64: aesDecryptFromBase64
+  aesDecryptFromBase64: aesDecryptFromBase64,
 };
 function base64Encode(data) {
   let bufferObj = Buffer.from(data, "utf8");
@@ -79,35 +79,48 @@ function verifying(value, publicKey, signature) {
 }
 
 function generateAESKeyBase64() {
+  // Generate random bytes to get the key and the initialisation vector
   return [
     base64Encode(crypto.randomBytes(32)),
     base64Encode(crypto.randomBytes(16)),
   ];
 }
 
+// aes encryption
 function aesEncryptToBase64(clearText, keyBase64, iv) {
+  // parse key into buffer
   const key = Buffer.from(keyBase64, "base64");
+
+  // parse initialization vector
   const initializationVector = Buffer.from(iv, "base64");
+
+  // create the AES cipher using the key and the initialization vector
   const cipher = crypto.createCipheriv(
     "aes-256-ctr",
     key,
     initializationVector
   );
+
+  // encrypt the clearText data using the cipher created above
   let encrypted = cipher.update(clearText, "utf8", "binary");
+
+  // convert the encrypted result into a binary
   encrypted += cipher.final("binary");
+
+  // pack it as base64 and return
   return base64Encode(encrypted);
 }
-
 
 //  aes decryption
 function aesDecryptFromBase64(cipherTextBase64, keyBase64, iv) {
   const key = Buffer.from(keyBase64, "base64");
   const initializationVector = Buffer.from(iv, "base64");
   const decipher = crypto.createDecipheriv(
-    'aes-256-ctr',
+    "aes-256-ctr",
     key,
-    initializationVector);;
-  const clearText = base64Decode(cipherTextBase64)
-  let decryptedData = decipher.update(clearText, 'binary') + decipher.final();
+    initializationVector
+  );
+  const clearText = base64Decode(cipherTextBase64);
+  let decryptedData = decipher.update(clearText, "binary") + decipher.final();
   return decryptedData;
 }
