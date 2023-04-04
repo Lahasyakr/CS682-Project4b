@@ -1,5 +1,8 @@
 var EncryptionUtil = require("../../../atsign/src/util/EncryptionUtil");
 var expect = require("chai").expect;
+const fs = require('fs');
+const { generateRSAKeyPair } = require("../../../atsign/src/util/EncryptionUtil");
+
 
 describe("Base64EncodeDecode Testing", function () {
   describe("Testing Base64 Encoding", function () {
@@ -37,6 +40,60 @@ describe("AES Encrypt Decrypt testing", function () {
       );
     });
   });
+
+    //RSA KeyPair Generation Testing
+    describe("RSA KeyPair Generation Testing", function () {
+      it("Returns true if key has both public and private key", function () {
+        let key = EncryptionUtil.generateRSAKeyPair();
+        expect(key.hasOwnProperty('publicKey')).to.equal(true);
+        expect(key.hasOwnProperty('privateKey')).to.equal(true);
+      });
+    });
+
+  //RSA Encryption and Decryption Testing
+  describe("RSA Encryption and Decryption testing", function () {
+    it("Encrypt the text and then return a decrypted text", function () {
+      let key = EncryptionUtil.generateRSAKeyPair();
+      let publicKey = key.publicKey;
+      let privateKey = key.privateKey;
+      let text = "Testing RSA Encryption and Decryption of Data";
+      //Encrypting text using RSA
+      encryptedData = EncryptionUtil.rsaEncryptToBase64(text, publicKey);
+      //Decrypting encrypted text using RSA
+      decryptedData = EncryptionUtil.rsaDecryptToBase64(encryptedData,privateKey);
+      expect(decryptedData).to.equal(text);
+    });
+  });
+
+  //Positive Test Case for verification
+  describe("RSA Signing and Verification(Positive Test Case)", function () {
+    it("Create a signature and return true if signature is verified", function () {
+      let key = EncryptionUtil.generateRSAKeyPair();
+      let publicKey = key.publicKey;
+      let privateKey = key.privateKey;
+      let text = "Testing RSA Verification";
+      //Signature Method is called to create signature
+      signature = EncryptionUtil._signSHA256RSA(text, privateKey);
+      //Verification Method is called to verify the signature
+      verification = EncryptionUtil.verifying(text,publicKey,signature);
+      expect(verification).to.equal(true);
+    });
+  });
+
+    //Negative Test Case for verification
+    describe("RSA Signing and Verification(Negative Test Case)", function () {
+      it("Create signature and return false if signature is not verified", function () {
+        let key = EncryptionUtil.generateRSAKeyPair();
+        let publicKey = EncryptionUtil.generateRSAKeyPair().publicKey;
+        let privateKey = key.privateKey;
+        let text = "Testing RSA Verification";
+        //Signature Method is called to create signature
+        signature = EncryptionUtil._signSHA256RSA(text, privateKey);
+        //Verification Method is called to verify the signature
+        verification = EncryptionUtil.verifying(text,publicKey,signature);
+        expect(verification).to.equal(false);
+      });
+    });
 
   describe("AES Decryption testing", function () {
     it("Returns an decrypted text", function () {

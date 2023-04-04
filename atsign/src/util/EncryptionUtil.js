@@ -10,6 +10,7 @@ module.exports = {
   generateAESKeyBase64: generateAESKeyBase64,
   aesEncryptToBase64: aesEncryptToBase64,
   aesDecryptFromBase64: aesDecryptFromBase64,
+  rsaDecryptToBase64: rsaDecryptToBase64,
 };
 function base64Encode(data) {
   let bufferObj = Buffer.from(data, "utf8");
@@ -26,14 +27,17 @@ function base64Decode(data) {
 }
 
 //RSA KeyPair Generation
-
 function generateRSAKeyPair() {
+//Generating Key Pair for RSA
+//with standard modulusLength of 2048
   return ({ publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     modulusLength: 2048,
+    //Encoding publickey
     publicKeyEncoding: {
       type: "spki",
       format: "pem",
     },
+    //encoding privatekey
     privateKeyEncoding: {
       type: "pkcs8",
       format: "pem",
@@ -43,30 +47,60 @@ function generateRSAKeyPair() {
 
 //RSA Encryption
 function rsaEncryptToBase64(dataToBeEncrypted, publicKey) {
-  let encryptedText = crypto.publicEncrypt(
-    {
-      key: publicKey,
-      padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
-      oaepHash: "sha256",
-    },
-    Buffer.from(dataToBeEncrypted)
-  );
-  let base64Encode_RSA = encryptedText.toString("base64");
-  return base64Encode_RSA;
-}
+    //public key and padding is passed
+    //encrypts the data using publicEncrypt function
+    let encryptedText = crypto.publicEncrypt(
+      {
+        key: publicKey,
+        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+        oaepHash: "sha256",
+      },
+      // Converting dataToBeEncrypted string to a buffer
+      Buffer.from(dataToBeEncrypted)
+    );
+    return encryptedText;
+  }
+
+//RSA Decryption
+function rsaDecryptToBase64(encryptedData, privateKey) {
+  
+    //private key and padding is passed
+    //decrypts the encrypted Data using privateDecrypt function
+    let decryptedText = crypto.privateDecrypt(
+      {
+        key: privateKey,
+        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+      },
+      encryptedData
+    );
+
+    //Decrypted message is in form of buffer
+    //Converted to string to get original data
+    let base64Encode_RSA = decryptedText.toString();
+    return base64Encode_RSA;
+  }
 
 //Signing
 function _signSHA256RSA(value, privateKey) {
+// Converting value string to a buffer then
+//using sha256 - converting to hexa decimal encoded string
   const signature = crypto.sign("sha256", Buffer.from(value), {
     key: privateKey,
     padding: crypto.constants.RSA_PKCS1_PSS_PADDING,
   });
-  return signature.toString("base64");
+
+  //Signature is created using sign function of crypto
+  return signature;
 }
 
 //Verifying the signature
 function verifying(value, publicKey, signature) {
+
+    //isVerified returns true if the private key used to create signature
+    //and the public key used to verify are part of same keypair of RSA
   const isVerified = crypto.verify(
+    // Converting value string to a buffer thenthen 
+    //using sha256 - converting to hexa decimal encoded string
     "sha256",
     Buffer.from(value),
     {
@@ -75,6 +109,8 @@ function verifying(value, publicKey, signature) {
     },
     signature
   );
+  //passed signature is verified using verifying of crypto
+  // returns boolean
   return isVerified;
 }
 
