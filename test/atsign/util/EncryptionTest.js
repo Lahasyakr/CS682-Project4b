@@ -68,7 +68,7 @@ describe("AES Encrypt Decrypt testing", function () {
   });
 });
 
-describe("RSA encrypt decrypt signning and verifying testing", function () {
+describe("RSA Encryption and Decryption with Signing and Verification testing", function () {
   //RSA KeyPair Generation Testing
   describe("RSA KeyPair Generation Testing", function () {
     it("Returns true if key has both public and private key", function () {
@@ -88,12 +88,8 @@ describe("RSA encrypt decrypt signning and verifying testing", function () {
       //Encrypting text using RSA
       encryptedData = EncryptionUtil.rsaEncryptToBase64(text, publicKey);
       //Decrypting encrypted text using RSA
-      decryptedData = EncryptionUtil.rsaDecryptToBase64(
-        encryptedData,
-        privateKey
-      );
-
-      expect(EncryptionUtil.base64Decode(decryptedData)).to.equal(text);
+      decryptedData = EncryptionUtil.rsaDecryptFromBase64(encryptedData,privateKey);
+      expect(decryptedData).to.equal(text);
     });
   });
 

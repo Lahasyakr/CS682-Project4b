@@ -10,7 +10,7 @@ module.exports = {
   generateAESKeyBase64: generateAESKeyBase64,
   aesEncryptToBase64: aesEncryptToBase64,
   aesDecryptFromBase64: aesDecryptFromBase64,
-  rsaDecryptToBase64: rsaDecryptToBase64,
+  rsaDecryptFromBase64: rsaDecryptFromBase64,
 };
 function base64Encode(data) {
   let bufferObj = Buffer.from(data, "utf8");
@@ -59,11 +59,12 @@ function rsaEncryptToBase64(dataToBeEncrypted, publicKey) {
     Buffer.from(dataToBeEncrypted)
   );
 
-  return base64Encode(encryptedText);
+  let base64Encode_RSA = encryptedText.toString("base64");
+  return base64Encode_RSA;
 }
 
 //RSA Decryption
-function rsaDecryptToBase64(encryptedData, privateKey) {
+function rsaDecryptFromBase64(encryptedData, privateKey) {
   //private key and padding is passed
   //decrypts the encrypted Data using privateDecrypt function
   let decryptedText = crypto.privateDecrypt(
@@ -77,8 +78,8 @@ function rsaDecryptToBase64(encryptedData, privateKey) {
 
   //Decrypted message is in form of buffer
   //Converted to string to get original data
-  let base64Encode_RSA = decryptedText.toString();
-  return base64Encode(base64Encode_RSA);
+  let base64Decode_RSA = decryptedText.toString();
+  return base64Decode_RSA;
 }
 
 //Signing
