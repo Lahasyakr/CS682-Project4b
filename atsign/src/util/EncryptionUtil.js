@@ -28,8 +28,8 @@ function base64Decode(data) {
 
 //RSA KeyPair Generation
 function generateRSAKeyPair() {
-//Generating Key Pair for RSA
-//with standard modulusLength of 2048
+  //Generating Key Pair for RSA
+  //with standard modulusLength of 2048
   return ({ publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     modulusLength: 2048,
     //Encoding publickey
@@ -47,43 +47,44 @@ function generateRSAKeyPair() {
 
 //RSA Encryption
 function rsaEncryptToBase64(dataToBeEncrypted, publicKey) {
-    //public key and padding is passed
-    //encrypts the data using publicEncrypt function
-    let encryptedText = crypto.publicEncrypt(
-      {
-        key: publicKey,
-        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
-        oaepHash: "sha256",
-      },
-      // Converting dataToBeEncrypted string to a buffer
-      Buffer.from(dataToBeEncrypted)
-    );
-    return encryptedText;
-  }
+  //public key and padding is passed
+  //encrypts the data using publicEncrypt function
+  let encryptedText = crypto.publicEncrypt(
+    {
+      key: publicKey,
+      padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+      oaepHash: "sha256",
+    },
+    // Converting dataToBeEncrypted string to a buffer
+    Buffer.from(dataToBeEncrypted)
+  );
+
+  return base64Encode(encryptedText);
+}
 
 //RSA Decryption
 function rsaDecryptToBase64(encryptedData, privateKey) {
-  
-    //private key and padding is passed
-    //decrypts the encrypted Data using privateDecrypt function
-    let decryptedText = crypto.privateDecrypt(
-      {
-        key: privateKey,
-        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
-      },
-      encryptedData
-    );
+  //private key and padding is passed
+  //decrypts the encrypted Data using privateDecrypt function
+  let decryptedText = crypto.privateDecrypt(
+    {
+      key: privateKey,
+      padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+      oaepHash: "sha256",
+    },
+    Buffer.from(encryptedData, "base64")
+  );
 
-    //Decrypted message is in form of buffer
-    //Converted to string to get original data
-    let base64Encode_RSA = decryptedText.toString();
-    return base64Encode_RSA;
-  }
+  //Decrypted message is in form of buffer
+  //Converted to string to get original data
+  let base64Encode_RSA = decryptedText.toString();
+  return base64Encode(base64Encode_RSA);
+}
 
 //Signing
 function _signSHA256RSA(value, privateKey) {
-// Converting value string to a buffer then
-//using sha256 - converting to hexa decimal encoded string
+  // Converting value string to a buffer then
+  //using sha256 - converting to hexa decimal encoded string
   const signature = crypto.sign("sha256", Buffer.from(value), {
     key: privateKey,
     padding: crypto.constants.RSA_PKCS1_PSS_PADDING,
@@ -95,11 +96,10 @@ function _signSHA256RSA(value, privateKey) {
 
 //Verifying the signature
 function verifying(value, publicKey, signature) {
-
-    //isVerified returns true if the private key used to create signature
-    //and the public key used to verify are part of same keypair of RSA
+  //isVerified returns true if the private key used to create signature
+  //and the public key used to verify are part of same keypair of RSA
   const isVerified = crypto.verify(
-    // Converting value string to a buffer thenthen 
+    // Converting value string to a buffer thenthen
     //using sha256 - converting to hexa decimal encoded string
     "sha256",
     Buffer.from(value),
@@ -116,16 +116,15 @@ function verifying(value, publicKey, signature) {
 
 function generateAESKeyBase64() {
   // Generate random bytes to get the key and the initialisation vector
-  return [
-    base64Encode(crypto.randomBytes(32)),
-    base64Encode(crypto.randomBytes(16)),
-  ];
+  return base64Encode(crypto.randomBytes(32));
 }
 
 // aes encryption
-function aesEncryptToBase64(clearText, keyBase64, iv) {
+function aesEncryptToBase64(clearText, keyBase64) {
   // parse key into buffer
   const key = Buffer.from(keyBase64, "base64");
+
+  const iv = Buffer.alloc(16, 0);
 
   // parse initialization vector
   const initializationVector = Buffer.from(iv, "base64");
@@ -148,8 +147,9 @@ function aesEncryptToBase64(clearText, keyBase64, iv) {
 }
 
 //  aes decryption
-function aesDecryptFromBase64(cipherTextBase64, keyBase64, iv) {
+function aesDecryptFromBase64(cipherTextBase64, keyBase64) {
   const key = Buffer.from(keyBase64, "base64");
+  const iv = Buffer.alloc(16, 0);
   const initializationVector = Buffer.from(iv, "base64");
   const decipher = crypto.createDecipheriv(
     "aes-256-ctr",
