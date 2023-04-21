@@ -12,17 +12,28 @@ module.exports = {
   aesDecryptFromBase64: aesDecryptFromBase64,
   rsaDecryptFromBase64: rsaDecryptFromBase64,
 };
+
+//Base64 encode
 function base64Encode(data) {
+  //creates new buffer - Buffer.from(obj, encoding); - here encoding is 'utf8'
   let bufferObj = Buffer.from(data, "utf8");
 
-  // Encoding into base64
+  // Encoding into base64 - here we get the string representation of the buffer where each byte is encoded as base64
   let base64String = bufferObj.toString("base64");
+
+  // return the encoded string
   return base64String;
 }
 
+//Base64 encode
 function base64Decode(data) {
+  //creates buffer - Buffer.from(obj, encoding); - here encoding is 'utf8'
   let bufferObj = Buffer.from(data, "base64");
+
+  //decoding - here we get the string representation of the buffer where each byte is encoded as 'utf8'
   let string = bufferObj.toString("utf8");
+
+  // return encoded string
   return string;
 }
 
@@ -149,15 +160,27 @@ function aesEncryptToBase64(clearText, keyBase64) {
 
 //  aes decryption
 function aesDecryptFromBase64(cipherTextBase64, keyBase64) {
+  //parse key
   const key = Buffer.from(keyBase64, "base64");
+  //initialization vector
   const iv = Buffer.alloc(16, 0);
+
+   // parse initialization vector into buffer
   const initializationVector = Buffer.from(iv, "base64");
+
+  // create the AES decipher using the key and the initialization vector
   const decipher = crypto.createDecipheriv(
     "aes-256-ctr",
     key,
     initializationVector
   );
+
+  //Base64 decoding of the text that is need to be decrypted-(as encrpted message is base64 encoded before sending in AES Encryption)
   const clearText = base64Decode(cipherTextBase64);
+
+  // Decrypt the text using AES decipher created above
   let decryptedData = decipher.update(clearText, "binary") + decipher.final();
+
+  //return decrypted text
   return decryptedData;
 }
