@@ -31,7 +31,7 @@ describe("Base64 Encode and Decode Testing", function () {
   });
 });
 
-describe("AES Encrypt Decrypt testing", function () {
+describe("AES Encryption and Decryption testing", function () {
   describe("AES Encryption testing", function () {
     it("Returns an Encrypted string", function () {
       // We already have a clear text and the key and the initialisation vector
