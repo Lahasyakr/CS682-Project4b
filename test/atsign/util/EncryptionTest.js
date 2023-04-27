@@ -5,9 +5,10 @@ const {
   generateRSAKeyPair,
 } = require("../../../atsign/src/util/EncryptionUtil");
 
-describe("Base64EncodeDecode Testing", function () {
+describe("Base64 Encode and Decode Testing", function () {
   describe("Testing Base64 Encoding", function () {
     it("Returns an Encoding String", function () {
+      //Ecoding the plain text
       encodeData = EncryptionUtil.base64Encode("Testing Base64 Encoded Data");
 
       expect(encodeData).to.equal("VGVzdGluZyBCYXNlNjQgRW5jb2RlZCBEYXRh");
@@ -16,11 +17,16 @@ describe("Base64EncodeDecode Testing", function () {
 
   describe("Testing Base64 Decoding", function () {
     it("Returns a Decoded String", function () {
+      //This text will be encoded first and then encoded data will be decoded to see if decoded text matches the original text.
+      let EncodingText = "Testing Base64 Decoding Function";
+      //Encoding 
       encodeData = EncryptionUtil.base64Encode(
-        "Testing Base64 Decoding Function"
+        EncodingText
       );
+      //decoding the encoded data
       result = EncryptionUtil.base64Decode(encodeData);
-      expect(result).to.equal("Testing Base64 Decoding Function");
+      //seeing if decoded data matches the original text
+      expect(result).to.equal(EncodingText);
     });
   });
 });
@@ -49,7 +55,7 @@ describe("AES Encrypt Decrypt testing", function () {
       encryptedData = EncryptionUtil.aesEncryptToBase64(text, key);
       // testing the AES Decryption -> Decrypting the encryptedData
       decryptedData = EncryptionUtil.aesDecryptFromBase64(encryptedData, key);
-
+      // checking if decrypted data matches the original text
       expect(decryptedData).to.equal(text);
     });
   });
