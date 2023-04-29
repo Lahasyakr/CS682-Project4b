@@ -6,7 +6,7 @@ const {
 } = require("../../../atsign/src/util/EncryptionUtil");
 
 describe("Base64 Encode and Decode Testing", function () {
-  describe("Testing Base64 Encoding=", function () {
+  describe("Testing Base64 Encoding", function () {
     it("Returns an Encoded String", function () {
       //Ecoding the plain text
       encodeData = EncryptionUtil.base64Encode("Testing Base64 Encoded Data");
