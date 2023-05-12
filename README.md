@@ -37,12 +37,12 @@ To run the code in this repository, please follow these steps:
    
 
 ## Features
-      Base64 encode and decode data.
-      Generate RSA key pairs for encryption and decryption.
-       Create and verify SHA256 RSA signatures.
-      Encrypt and decrypt data using RSA encryption.
-      Generate AES keys for encryption and decryption.
-      Encrypt and decrypt data using AES encryption.
+      1. Base64 encode and decode data.
+      2. Generate RSA key pairs for encryption and decryption.
+      3. Create and verify SHA256 RSA signatures.
+      4. Encrypt and decrypt data using RSA encryption.
+      5. Generate AES keys for encryption and decryption.
+      6. Encrypt and decrypt data using AES encryption.
      
       
  ## Usage
