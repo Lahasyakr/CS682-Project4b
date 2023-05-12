@@ -7,6 +7,7 @@ Welcome to the CS682-Project4b repository! This repository contains the code and
 ## Table of Contents
 - [Description](#description)
 - [Setup](#setup)
+- [Features](#features)
 - [Usage](#usage)
 - [License](#license)
 
@@ -35,21 +36,16 @@ To run the code in this repository, please follow these steps:
      npm test
    
 
-
-# Functions avaialble in EncryptionUtil Module.
-    
-      base64Encode - returns base64 encoded data (string -> base64),
-      base64Decode - returns base64 decoded data (base64 -> string),
-      generateRSAKeyPair - generates RSA public and private key,
-      rsaEncryptToBase64 - RSA Encryption (string to RSA encrypted data),,
-      _signSHA256RSA -  adds signature,
-      verifying  - verify the signature,
-      generateAESKeyBase64: generate AES key,
-      aesEncryptToBase64: AES Encryption (string to AES encrypted data),
-      aesDecryptFromBase64: AES Decryption,
-      rsaDecryptFromBase64: RSA Decryption,
+## Features
+      Base64 encode and decode data.
+      Generate RSA key pairs for encryption and decryption.
+       Create and verify SHA256 RSA signatures.
+      Encrypt and decrypt data using RSA encryption.
+      Generate AES keys for encryption and decryption.
+      Encrypt and decrypt data using AES encryption.
+     
       
- # How to use?
+ ## Usage
   * Import EncryptionUtil Module 
   
         var EncryptionUtil = require("../../../atsign/src/util/EncryptionUtil");
