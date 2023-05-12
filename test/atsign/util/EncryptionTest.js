@@ -1,9 +1,7 @@
 var EncryptionUtil = require("../../../atsign/src/util/EncryptionUtil");
 var expect = require("chai").expect;
-const fs = require("fs");
-const {
-  generateRSAKeyPair,
-} = require("../../../atsign/src/util/EncryptionUtil");
+
+
 
 describe("Base64 Encode and Decode Testing", function () {
   describe("Testing Base64 Encoding", function () {

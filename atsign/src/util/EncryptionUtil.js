@@ -13,7 +13,16 @@ module.exports = {
   rsaDecryptFromBase64: rsaDecryptFromBase64,
 };
 
+
+
+
 //Base64 encode
+/**
+ * Base64 encode
+ *
+ * @param {String} data
+ * @returns {String}
+ */
 function base64Encode(data) {
   //creates new buffer - Buffer.from(obj, encoding); - here encoding is 'utf8'
   let bufferObj = Buffer.from(data, "utf8");
@@ -25,7 +34,16 @@ function base64Encode(data) {
   return base64String;
 }
 
-//Base64 encode
+
+
+
+
+//Base64 decode
+/**
+ * 
+ * @param {String} data 
+ * @returns {String}
+ */
 function base64Decode(data) {
   //creates buffer - Buffer.from(obj, encoding); - here encoding is 'utf8'
   let bufferObj = Buffer.from(data, "base64");
@@ -37,7 +55,16 @@ function base64Decode(data) {
   return string;
 }
 
+
+
+
+
+
 //RSA KeyPair Generation
+/**
+ * 
+ * @returns {Object}
+ */
 function generateRSAKeyPair() {
   //Generating Key Pair for RSA
   //with standard modulusLength of 2048
@@ -56,7 +83,17 @@ function generateRSAKeyPair() {
   }));
 }
 
+
+
+
+
 //RSA Encryption
+/**
+ * 
+ * @param {String} dataToBeEncrypted 
+ * @param {*} publicKey 
+ * @returns {String}
+ */
 function rsaEncryptToBase64(dataToBeEncrypted, publicKey) {
   //public key and padding is passed
   //encrypts the data using publicEncrypt function
@@ -74,7 +111,18 @@ function rsaEncryptToBase64(dataToBeEncrypted, publicKey) {
   return base64Encode_RSA;
 }
 
+
+
+
+
+
 //RSA Decryption
+/**
+ * 
+ * @param {Base64 encoded encryptedData : String} encryptedData 
+ * @param {*} privateKey 
+ * @returns {String}
+ */
 function rsaDecryptFromBase64(encryptedData, privateKey) {
   //private key and padding is passed
   //decrypts the encrypted Data using privateDecrypt function
@@ -93,7 +141,17 @@ function rsaDecryptFromBase64(encryptedData, privateKey) {
   return base64Decode_RSA;
 }
 
+
+
+
+
 //Signing
+/**
+ * 
+ * @param {*} value 
+ * @param {*} privateKey 
+ * @returns {Buffer}
+ */
 function _signSHA256RSA(value, privateKey) {
   // Converting value string to a buffer then
   //using sha256 - converting to hexa decimal encoded string
@@ -106,7 +164,18 @@ function _signSHA256RSA(value, privateKey) {
   return signature;
 }
 
+
+
+
+
 //Verifying the signature
+/**
+ * 
+ * @param {*} value 
+ * @param {*} publicKey 
+ * @param {*} signature 
+ * @returns {boolean}
+ */
 function verifying(value, publicKey, signature) {
   //isVerified returns true if the private key used to create signature
   //and the public key used to verify are part of same keypair of RSA
@@ -126,12 +195,28 @@ function verifying(value, publicKey, signature) {
   return isVerified;
 }
 
+
+
+
+/**
+ * 
+ * @returns {String}
+ */
 function generateAESKeyBase64() {
   // Generate random bytes to get the key and the initialisation vector
   return base64Encode(crypto.randomBytes(32));
 }
 
+
+
+
 // aes encryption
+/**
+ * 
+ * @param {String} clearText 
+ * @param {*} keyBase64 
+ * @returns String
+ */
 function aesEncryptToBase64(clearText, keyBase64) {
   // parse key into buffer
   const key = Buffer.from(keyBase64, "base64");
@@ -158,7 +243,16 @@ function aesEncryptToBase64(clearText, keyBase64) {
   return base64Encode(encrypted);
 }
 
+
+
+
 //  aes decryption
+/**
+ * 
+ * @param {String} cipherTextBase64 
+ * @param {*} keyBase64 
+ * @returns {String}
+ */
 function aesDecryptFromBase64(cipherTextBase64, keyBase64) {
   //parse key
   const key = Buffer.from(keyBase64, "base64");
