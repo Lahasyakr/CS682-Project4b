@@ -60,7 +60,7 @@ To run the code in this repository, please follow these steps:
          
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use the code for academic or personal purposes.
+This project is licensed under the [MIT License](LICENSE). 
 
 ---
 
