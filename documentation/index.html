@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CS682 - Project-4b</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            max-width: 65%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-title {
+            font-size: 24px;
+            margin-top: 0;
+            text-align: center;
+            color: #0095dd;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            font-size: 18px !important;
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 0% !important;
+            margin-top: 25% !important;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        nav {
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: #0095dd;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #48b1e2;
+            transition: color 0.1s;
+            font-size: medium;
+
+        }
+
+        a:hover {
+            color: #48b1e2;
+        }
+    </style>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <img src="logos/atsign.png" alt="atsign">
+        <h2 class="page-title">Encryption and DeCryption - RSA, AES, and Base64 encode and decode using JavaScript</h2>
+
+
+
+
+
+
+
+
+        <p>
+        <h3><b>Overview</b></h3>
+        <h3> Welcome to the CS682-Project4b code document! This document contains the code required information for
+            Project 4b
+            of the CS682 course. In this project, we have implemented module for encryption and decryption using RSA,
+            AES, and Base64 encoding/decoding using JavaScript.</h3>
+        </p>
+
+        <p>
+        <h3>
+            <b>Please refer to the side nav bar for the documentation, which describes the full range of attributes and
+                functions.</b>
+        </h3>
+        </p>
+        <p><a href="https://niivue.github.io/niivue/devdocs/">click here to go to the docs web page</a></p>
+
+        <p>
+        <h3>Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0</h3>
+        </p>
+
+        <p>
+        <h3><b>Available Features</b></h3>
+        <h3>
+            <ol>
+                <li>Base64 encode and decode data.</li>
+                <li>Generate RSA key pairs for encryption and decryption.</li>
+                <li>Create and verify SHA256 RSA signatures.</li>
+                <li>Encrypt and decrypt data using RSA encryption.</li>
+                <li>Generate AES keys for encryption and decryption.</li>
+                <li>Encrypt and decrypt data using AES encryption.</li>
+            </ol>
+        </h3>
+        </p>
+
+        <p>
+        <h3><b>Technologies used</b></h3>
+        <img src="logos/nodejs.png" alt="node"  width="150" height="100">
+        <img src="logos/mocha.png" alt="Mocha">
+        </p>
+
+        <p>
+        <h3><b>Contributors :</b></h3>
+
+        <h3>
+            <ul style="padding-left: 5px;">
+                <li>Lahasya Kakkadde Rajanna</li>
+                <li>Sneha Babuji</li>
+                <li>Samyak Gangwal</li>
+            </ul>
+        </h3>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <nav>
+        <!-- <h3><a href="index.html">Home</a></h2> -->
+        <h3 style="font-size: 25px !important;">Features/Functions available</h3>
+        <ul>
+            <li><a href="global.html#base64Encode">Base64 Encode</a></li>
+            <li><a href="global.html#base64Decode">Base64 Decode</a></li>
+
+            <li><a href="global.html#generateAESKeyBase64">AES key generation</a></li>
+            <li><a href="global.html#aesDecryptFromBase64">AES Decryption</a></li>
+            <li><a href="global.html#aesEncryptToBase64">AES Encryption</a></li>
+
+
+            <li><a href="global.html#generateRSAKeyPair">RSA key generation</a></li>
+            <li><a href="global.html#_signSHA256RSA">Create RSA signatures</a></li>
+            <li><a href="global.html#verifying">verifying RSA signatures</a></li>
+            <li><a href="global.html#rsaDecryptFromBase64">RSA Decryption</a></li>
+            <li><a href="global.html#rsaEncryptToBase64">RSA Encryption</a></li>
+
+        </ul>
+    </nav>
+
+    <br class="clear">
+
+    <footer>
+        Code Documentation for CS682 - project-4b
+    </footer>
+
+    <script> prettyPrint(); </script>
+    <script src="scripts/linenumber.js"> </script>
+</body>
+
+</html>
