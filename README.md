@@ -26,20 +26,20 @@ Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a>
 To run the code in this repository, please follow these steps:
 
 1. Clone the repository:
-      ```bash
-   git clone https://github.com/Lahasyakr/CS682-Project4b.git
+      
+        git clone https://github.com/Lahasyakr/CS682-Project4b.git
   
 2. Navigate to the project directory:
-      ```bash
-    cd CS682-Project4b
+      
+        cd CS682-Project4b
     
 3. Install the required dependencies:
-     ```bash
-     npm install
+          
+          npm install
      
 4. To run the test case:
-     ```bash
-     npm test
+         
+         npm test
    
 
 ## Features
