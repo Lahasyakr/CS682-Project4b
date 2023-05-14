@@ -1,5 +1,9 @@
 # CS682-Project4b
 
+<p align="left">
+  <img src="documentation/logos/atsign.png">
+</p>
+
 <h3>Encryption and DeCryption - RSA, AES, and Base64 encode and decode</h3>
 
 Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding.
