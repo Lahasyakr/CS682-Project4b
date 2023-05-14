@@ -22,6 +22,8 @@ In this project, we delve into the fascinating field of cryptography. We aim to 
 
 <p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">click here to go to the code documents web page</a></p>
 
+<p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github link to the repository</a></p>
+
 
 Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0 .
 
