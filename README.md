@@ -2,6 +2,7 @@
 
 <p align="left">
   <img src="documentation/logos/atsign.png">
+  <img align ="right" src="documentation/logos/umass.png">
 </p>
 
 <h3>Encryption and DeCryption - RSA, AES, and Base64 encode and decode</h3>
