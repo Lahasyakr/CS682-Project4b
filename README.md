@@ -2,6 +2,7 @@
 
 <p align="left">
   <img src="documentation/logos/atsign.png">
+  <img align ="right" src="documentation/logos/umass.png">
 </p>
 
 <h3>Encryption and DeCryption - RSA, AES, and Base64 encode and decode</h3>
@@ -20,6 +21,8 @@ Welcome to the CS682-Project4b repository! This repository contains the code and
 In this project, we delve into the fascinating field of cryptography. We aim to build a module that can perform encryption and decryption of a string using different crypto algorithms.
 
 <p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">click here to go to the code documents web page</a></p>
+
+<p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github link to the repository</a></p>
 
 
 Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0 .
