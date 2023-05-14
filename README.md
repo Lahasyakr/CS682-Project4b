@@ -1,27 +1,53 @@
 # CS682-Project4b
-Encryption and DeCryption - RSA, AES, and  Base64 encode and decode
-  * The main technology used  : Nodejs
 
-# <h3>How to clone and use</h3>
-   * Clone the repo and run following commands
-      * npm install
-      * to run the test cases - npm test
+<h3>Encryption and DeCryption - RSA, AES, and Base64 encode and decode</h3>
 
-# Functions avaialble in EncryptionUtil Module.
+Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding.
+
+## Table of Contents
+- [Description](#description)
+- [Setup](#setup)
+- [Features](#features)
+- [Usage](#usage)
+- [License](#license)
+
+## Description
+
+In this project, we delve into the fascinating field of cryptography. We aim to build a module that can perform encryption and decryption of a string using different crypto algorithms.
+
+Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0 .
+
+## Setup
+
+To run the code in this repository, please follow these steps:
+
+1. Clone the repository:
+      ```bash
+   git clone https://github.com/Lahasyakr/CS682-Project4b.git
+  
+2. Navigate to the project directory:
+      ```bash
+    cd CS682-Project4b
     
+3. Install the required dependencies:
+     ```bash
+     npm install
+     
+4. To run the test case:
+     ```bash
+     npm test
+   
 
-      base64Encode - returns base64 encoded data (string -> base64),
-      base64Decode - returns base64 decoded data (base64 -> string),
-      generateRSAKeyPair - generates RSA public and private key,
-      rsaEncryptToBase64 - RSA Encryption (string to RSA encrypted data),,
-      _signSHA256RSA -  adds signature,
-      verifying  - verify the signature,
-      generateAESKeyBase64: generate AES key,
-      aesEncryptToBase64: AES Encryption (string to AES encrypted data),
-      aesDecryptFromBase64: AES Decryption,
-      rsaDecryptFromBase64: RSA Decryption,
+## Features
+      1. Base64 encode and decode data.
+      2. Generate RSA key pairs for encryption and decryption.
+      3. Create and verify SHA256 RSA signatures.
+      4. Encrypt and decrypt data using RSA encryption.
+      5. Generate AES keys for encryption and decryption.
+      6. Encrypt and decrypt data using AES encryption.
+     
       
- # How to use?
+ ## Usage
   * Import EncryptionUtil Module 
   
         var EncryptionUtil = require("../../../atsign/src/util/EncryptionUtil");
@@ -33,6 +59,14 @@ Encryption and DeCryption - RSA, AES, and  Base64 encode and decode
          let key = EncryptionUtil.generateAESKeyBase64();
          
          ............similarly all the functions can be accessed....................
+         
+## License
+
+This project is licensed under the [MIT License](LICENSE). 
+
+---
+
+Thank you for visiting the CS682-Project4b repository! If you have any questions or need further assistance, please don't hesitate to open an issue or contact the repository owner. Enjoy exploring the world of cryptography!
          
    
          
