@@ -15,6 +15,8 @@ Welcome to the CS682-Project4b repository! This repository contains the code and
 
 In this project, we delve into the fascinating field of cryptography. We aim to build a module that can perform encryption and decryption of a string using different crypto algorithms.
 
+Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0 .
+
 ## Setup
 
 To run the code in this repository, please follow these steps:
