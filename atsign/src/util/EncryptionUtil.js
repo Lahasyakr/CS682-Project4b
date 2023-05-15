@@ -221,6 +221,7 @@ function aesEncryptToBase64(clearText, keyBase64) {
   // parse key into buffer
   const key = Buffer.from(keyBase64, "base64");
 
+  // For this project we have set the initialization vector to 16 bytes of zeroes for encryption and decryption   
   const iv = Buffer.alloc(16, 0);
 
   // parse initialization vector
