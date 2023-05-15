@@ -1,11 +1,11 @@
-# CS682-Project4b
+# CryptoLib
 
-<p align="left">
-  <img src="documentation/logos/atsign.png">
-  <img align ="right" src="documentation/logos/umass.png">
-</p>
 
-<h3>Encryption and DeCryption - RSA, AES, and Base64 encode and decode</h3>
+
+
+## Encryption and Decryption - RSA, AES, and Base64 encode and decode using Javascript
+
+### CS682-Project4b 
 
 Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding.
 
@@ -71,6 +71,12 @@ To run the code in this repository, please follow these steps:
          ............similarly all the functions can be accessed....................
          
 ## License
+
+## Affiliations 
+<p align="left">
+  <img src="documentation/logos/atsign.png">
+  <img align ="right" src="documentation/logos/umass.png">
+</p>
 
 This project is licensed under the [MIT License](LICENSE). 
 
