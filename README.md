@@ -1,4 +1,6 @@
-# CS682-Project4b
+# CryptoLib
+
+## CS682-Project4b
 
 <p align="left">
   <img src="documentation/logos/atsign.png">
