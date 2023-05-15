@@ -7,7 +7,7 @@
 
 ### CS682-Project4b 
 
-Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course of Umass Boston. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding. The project can be used as a library to used in the javascript sdk for the Atsign company.
+Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding. The project can be used as a library in the javascript sdk by the Atsign company.
 
 ## Table of Contents
 - [Description](#description)
@@ -27,11 +27,11 @@ In this project, we delve into the fascinating field of cryptography. We aim to 
 
 About The Project:
 * Language Used : Javascript
-* Built and Tested : <a href="https://nodejs.dev/en/">NodeJS</a>
+* Built and Tested Language: <a href="https://nodejs.dev/en/">NodeJS</a>
 * Version of NodeJS: v18.14.0
 * Testing Framework Used: Mocha and Chai JavaScript test framework
 
-To learn more about the project click on the documentation link:
+To learn more about the project click on the documentation link below:
 <p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a></p>
 
 To get the Github link to the repository click the link below:

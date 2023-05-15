@@ -67,7 +67,7 @@ function base64Decode(data) {
  */
 function generateRSAKeyPair() {
   //Generating Key Pair for RSA
-  //with standard modulusLength of 2048
+  //with standard modulus Length of 2048
   return ({ publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     modulusLength: 2048,
     //Encoding publickey
@@ -75,7 +75,7 @@ function generateRSAKeyPair() {
       type: "spki",
       format: "pem",
     },
-    //encoding privatekey
+    //Encoding privatekey
     privateKeyEncoding: {
       type: "pkcs8",
       format: "pem",
@@ -153,6 +153,8 @@ function rsaDecryptFromBase64(encryptedData, privateKey) {
  * @returns {Buffer}
  */
 function _signSHA256RSA(value, privateKey) {
+  //By passing a string and privateKey in sign() function  of the crypto 
+  //a signature of the sender is created for the encrypted data to be sent.
   // Converting value string to a buffer then
   //using sha256 - converting to hexa decimal encoded string
   const signature = crypto.sign("sha256", Buffer.from(value), {

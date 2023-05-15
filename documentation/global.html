@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>CS682 - Project-4b</title>
@@ -11,7 +10,6 @@
             margin: 0;
             padding: 0;
         }
-
         #main {
             max-width: 65%;
             margin: 0 auto;
@@ -19,7 +17,6 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         .page-title {
             font-size: 24px;
             margin-top: 0;
@@ -28,7 +25,6 @@
             padding-bottom: 20px;
             border-bottom: 1px solid #ddd;
         }
-
         h3 {
             font-size: 25px !important;
             margin-top: 20px;
@@ -37,7 +33,6 @@
         h4{
             font-size: 20px !important;
         }
-
         footer {
             background-color: #333;
             color: #fff;
@@ -46,31 +41,25 @@
             text-align: center;
             font-size: 14px;
         }
-
         nav {
             padding: 10px;
             margin-top: 20px;
             border-radius: 5px;
             color: #0095dd;
         }
-
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-
         li {
             margin-bottom: 10px;
         }
-
         a {
             color: #48b1e2;
             transition: color 0.1s;
             font-size: medium;
-
         }
-
         a:hover {
             color: #48b1e2;
         }
@@ -83,211 +72,45 @@
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
 </head>
-
 <body>
-
     <div id="main">
-
         <h1 class="page-title"><b>Module - EncryptionUtil</b></h1>
-
-
-
-
-
-
         <section>
-
             <header>
-
                 <h2></h2>
-
-
             </header>
-
             <article>
                 <div class="container-overview">
-
-
-
-
-
-
                     <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </dl>
-
-
-
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <h3 class="subsection-title">Methods</h3>
-
-
-
-
-
-
-
                 
-
-
-
-
-
-
-
-
-
-
-
-
                 <h4 class="name" id="base64Encode"><span class="type-signature"></span>base64Encode<span
                     class="signature">(data)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-
-
-
-
-
             <div class="description">
                 <p>Base64 encode</p>
             </div>
-
-
-
-
-
-
-
-
-
             <h5>Parameters:</h5>
-
-
             <table class="params">
                 <thead>
                     <tr>
-
                         <th>Name</th>
-
-
                         <th>Type</th>
-
-
-
-
-
                         <th class="last">Description</th>
                     </tr>
                 </thead>
-
                 <tbody>
-
-
                     <tr>
-
                         <td class="name"><code>data</code></td>
-
-
                         <td class="type">
-
-
                             <span class="param-type">String</span>
-
-
-
                         </td>
-
-
-
-
-
                         <td class="description last"></td>
                     </tr>
-
-
                 </tbody>
             </table>
-
-
-
-
-
-
             <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <dt class="tag-source">Source:</dt>
                 <dd class="tag-source">
                     <ul class="dummy">
@@ -297,118 +120,32 @@
                         </li>
                     </ul>
                 </dd>
-
-
-
-
-
-
-
             </dl>
-
-
-
-
-
-
             <h4 class="name" id="base64Decode"><span class="type-signature"></span>base64Decode<span
                 class="signature">(data)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-
-
-
-
                 <div class="description">
                     Base64 Decode
                  </div>
-
-
-
-
-
-
-
-
         <h5>Parameters:</h5>
-
-
         <table class="params">
             <thead>
                 <tr>
-
                     <th>Name</th>
-
-
                     <th>Type</th>
-
-
-
-
-
                     <th class="last">Description</th>
                 </tr>
             </thead>
-
             <tbody>
-
-
                 <tr>
-
                     <td class="name"><code>data</code></td>
-
-
                     <td class="type">
-
-
                         <span class="param-type">String</span>
-
-
-
                     </td>
-
-
-
-
-
                     <td class="description last"></td>
                 </tr>
-
-
             </tbody>
         </table>
-
-
-
-
-
-
         <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source">
                 <ul class="dummy">
@@ -418,67 +155,14 @@
                     </li>
                 </ul>
             </dd>
-
-
-
-
-
-
-
         </dl>
-
-
-
                 <h4 class="name" id="generateAESKeyBase64"><span class="type-signature"></span>generateAESKeyBase64<span
                     class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-
-
-
-
-
                     <div class="description">
                         Generate random bytes to get the key for AES.
                     </div>
-
                    
-
-
-
-
-
-
-
-
-
-
             <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <dt class="tag-source">Source:</dt>
                 <dd class="tag-source">
                     <ul class="dummy">
@@ -488,161 +172,42 @@
                         </li>
                     </ul>
                 </dd>
-
-
-
-
-
-
-
             </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             
-
-
-
-
-
-
-
-
                 <h4 class="name" id="aesDecryptFromBase64"><span class="type-signature"></span>aesDecryptFromBase64<span
                         class="signature">(cipherTextBase64, keyBase64)</span><span class="type-signature"> &rarr;
                         {String}</span></h4>
-
-
-
-
                         <div class="description">
                           Decryption using AES Algorithm
                         </div>
         
-
-
-
-
-
-
-
-
-
                 <h5>Parameters:</h5>
-
-
                 <table class="params">
                     <thead>
                         <tr>
-
                             <th>Name</th>
-
-
                             <th>Type</th>
-
-
-
-
-
                             <th class="last">Description</th>
                         </tr>
                     </thead>
-
                     <tbody>
-
-
                         <tr>
-
                             <td class="name"><code>cipherTextBase64</code></td>
-
-
                             <td class="type">
-
-
                                 <span class="param-type">String</span>
-
-
-
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
-
                         <tr>
-
                             <td class="name"><code>keyBase64</code></td>
-
-
                             <td class="type">
-
-
                                 <span class="param-type">String</span>
-
-
-
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
                     </tbody>
                 </table>
-
-
-
-
-
-
                 <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <dt class="tag-source">Source:</dt>
                     <dd class="tag-source">
                         <ul class="dummy">
@@ -652,164 +217,40 @@
                             </li>
                         </ul>
                     </dd>
-
-
-
-
-
-
-
                 </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <h4 class="name" id="aesEncryptToBase64"><span class="type-signature"></span>aesEncryptToBase64<span
                         class="signature">(clearText, keyBase64)</span><span class="type-signature"></span></h4>
-
-
-
-
-
                         <div class="description">
                             Encryption using AES Algorithm
                         </div>
         
-
-
-
-
-
-
-
-
                 <h5>Parameters:</h5>
-
-
                 <table class="params">
                     <thead>
                         <tr>
-
                             <th>Name</th>
-
-
                             <th>Type</th>
-
-
-
-
-
                             <th class="last">Description</th>
                         </tr>
                     </thead>
-
                     <tbody>
-
-
                         <tr>
-
                             <td class="name"><code>clearText</code></td>
-
-
                             <td class="type">
-
-
                                 <span class="param-type">String</span>
-
-
-
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
-
                         <tr>
-
                             <td class="name"><code>keyBase64</code></td>
-
-
                             <td class="type">
-
-
                                 <span class="param-type">String</span>
-
-
-
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
                     </tbody>
                 </table>
-
-
-
-
-
-
                 <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <dt class="tag-source">Source:</dt>
                     <dd class="tag-source">
                         <ul class="dummy">
@@ -819,165 +260,15 @@
                             </li>
                         </ul>
                     </dd>
-
-
-
-
-
-
-
                 </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <h4 class="name" id="generateRSAKeyPair"><span class="type-signature"></span>generateRSAKeyPair<span
                         class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-
-
-
-
-
-
-
-
-
                         <div class="description">
-                            Generating Key Pair for RSA with standard modulusLength of 2048
+                            Generating Key Pair for RSA with standard modulus Length of 2048
                         </div>
-
-
-
-
-
-
-
-
+                        
                 <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <dt class="tag-source">Source:</dt>
                     <dd class="tag-source">
                         <ul class="dummy">
@@ -987,453 +278,41 @@
                             </li>
                         </ul>
                     </dd>
-
-
-
-
-
-
-
                 </dl>
-
-
-
-
-
-
-
-
-
-                <h4 class="name" id="_signSHA256RSA"><span class="type-signature"></span>_signSHA256RSA<span
-                    class="signature">(value, privateKey)</span><span class="type-signature"> &rarr; {Buffer}</span>
-            </h4>
-
-            <div class="description">
-                Converting value string to a buffer then using sha256 - converting to hexa decimal encoded string
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-            <h5>Parameters:</h5>
-
-
-            <table class="params">
-                <thead>
-                    <tr>
-
-                        <th>Name</th>
-
-
-                        <th>Type</th>
-
-
-
-
-
-                        <th class="last">Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-
-                    <tr>
-
-                        <td class="name"><code>value</code></td>
-
-
-                        <td class="type">
-
-
-                            <span class="param-type">String</span>
-
-
-
-                        </td>
-
-
-
-
-
-                        <td class="description last"></td>
-                    </tr>
-
-
-
-                    <tr>
-
-                        <td class="name"><code>privateKey</code></td>
-
-
-                        <td class="type">
-
-
-                            <span class="param-type">*</span>
-
-
-
-                        </td>
-
-
-
-
-
-                        <td class="description last"></td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-
-
-
-
-
-
-            <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <dt class="tag-source">Source:</dt>
-                <dd class="tag-source">
-                    <ul class="dummy">
-                        <li>
-                            <a href="EncryptionUtil.js.html">EncryptionUtil.js</a>, <a
-                                href="EncryptionUtil.js.html#line155">line 155</a>
-                        </li>
-                    </ul>
-                </dd>
-
-
-
-
-
-
-
-            </dl>
-
-
-
-
-
                 
-
-
-
-
-
-                <h4 class="name" id="verifying"><span class="type-signature"></span>verifying<span
-                    class="signature">(value, publicKey, signature)</span><span class="type-signature"> &rarr;
-                    {boolean}</span></h4>
-
-
-
-
-
-
-
-
-                    <div class="description">
-                        Function returns true if the private key used to create signature and the public key used to verify are part of same keypair of RSA
-                    </div>
-
-
-
-
-
-
-            <h5>Parameters:</h5>
-
-
-            <table class="params">
-                <thead>
-                    <tr>
-
-                        <th>Name</th>
-
-
-                        <th>Type</th>
-
-
-
-
-
-                        <th class="last">Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-
-                    <tr>
-
-                        <td class="name"><code>value</code></td>
-
-
-                        <td class="type">
-
-
-                            <span class="param-type">*</span>
-
-
-
-                        </td>
-
-
-
-
-
-                        <td class="description last"></td>
-                    </tr>
-
-
-
-                    <tr>
-
-                        <td class="name"><code>publicKey</code></td>
-
-
-                        <td class="type">
-
-
-                            <span class="param-type">*</span>
-
-
-
-                        </td>
-
-
-
-
-
-                        <td class="description last"></td>
-                    </tr>
-
-
-
-                    <tr>
-
-                        <td class="name"><code>signature</code></td>
-
-
-                        <td class="type">
-
-
-                            <span class="param-type">*</span>
-
-
-
-                        </td>
-
-
-
-
-
-                        <td class="description last"></td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-
-
-
-
-
-
-            <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <dt class="tag-source">Source:</dt>
-                <dd class="tag-source">
-                    <ul class="dummy">
-                        <li>
-                            <a href="EncryptionUtil.js.html">EncryptionUtil.js</a>, <a
-                                href="EncryptionUtil.js.html#line179">line 179</a>
-                        </li>
-                    </ul>
-                </dd>
-
-
-
-
-
-
-
                 <h4 class="name" id="rsaDecryptFromBase64"><span class="type-signature"></span>rsaDecryptFromBase64<span
                         class="signature">(encryptedData, privateKey)</span><span class="type-signature"> &rarr;
                         {String}</span></h4>
-
-
-
-
-
-
                         <div class="description">
-                            Decrypts the encrypted Data using privateDecrypt function
+                            Decrypts the encrypted Data by passing encryptedData and privateKey to the function privateDecrypt() of the crypto.
                         </div>
-
-
-
-
-
-
-
-
                 <h5>Parameters:</h5>
-
-
                 <table class="params">
                     <thead>
                         <tr>
-
                             <th>Name</th>
-
-
                             <th>Type</th>
-
-
-
-
-
                             <th class="last">Description</th>
                         </tr>
                     </thead>
-
                     <tbody>
-
-
                         <tr>
-
                             <td class="name"><code>encryptedData</code></td>
-
-
                             <td class="type">
-
+                                <span class="param-type">String</span>
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
-
                         <tr>
-
                             <td class="name"><code>privateKey</code></td>
-
-
                             <td class="type">
-
-
-                                <span class="param-type">*</span>
-
-
-
+                                <span class="param-type">String</span>
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
                     </tbody>
                 </table>
-
-
-
-
-
-
                 <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <dt class="tag-source">Source:</dt>
                     <dd class="tag-source">
                         <ul class="dummy">
@@ -1443,166 +322,41 @@
                             </li>
                         </ul>
                     </dd>
-
-
-
-
-
-
-
                 </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <h4 class="name" id="rsaEncryptToBase64"><span class="type-signature"></span>rsaEncryptToBase64<span
                         class="signature">(dataToBeEncrypted, publicKey)</span><span class="type-signature"> &rarr;
                         {String}</span></h4>
-
-
-
-
-
-
                         <div class="description">
-                            Encrypts the data using publicEncrypt function
+                            Encrypts the data by passing dataToBeEncrypted and publicKey to the function publicEncrypt() of the crypto.
                         </div>
-
-
-
-
-
-
-
-
                 <h5>Parameters:</h5>
-
-
                 <table class="params">
                     <thead>
                         <tr>
-
                             <th>Name</th>
-
-
                             <th>Type</th>
-
-
-
-
-
                             <th class="last">Description</th>
                         </tr>
                     </thead>
-
                     <tbody>
-
-
                         <tr>
-
                             <td class="name"><code>dataToBeEncrypted</code></td>
-
-
                             <td class="type">
-
-
                                 <span class="param-type">String</span>
-
-
-
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
-
                         <tr>
-
                             <td class="name"><code>publicKey</code></td>
-
-
                             <td class="type">
-
-
-                                <span class="param-type">*</span>
-
-
-
+                                <span class="param-type">String</span>
                             </td>
-
-
-
-
-
                             <td class="description last"></td>
                         </tr>
-
-
                     </tbody>
                 </table>
-
-
-
-
-
-
                 <dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <dt class="tag-source">Source:</dt>
                     <dd class="tag-source">
                         <ul class="dummy">
@@ -1612,101 +366,116 @@
                             </li>
                         </ul>
                     </dd>
-
-
-
-
-
-
-
                 </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <h4 class="name" id="_signSHA256RSA"><span class="type-signature"></span>_signSHA256RSA<span
+                    class="signature">(value, privateKey)</span><span class="type-signature"> &rarr; {Buffer}</span>
+            </h4>
+            <div class="description">
+                By passing a string and privateKey in sign() function  of the crypto a signature of the sender is created for the encrypted data to be sent.
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th class="last">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="name"><code>value</code></td>
+                        <td class="type">
+                            <span class="param-type">String</span>
+                        </td>
+                        <td class="description last"></td>
+                    </tr>
+                    <tr>
+                        <td class="name"><code>privateKey</code></td>
+                        <td class="type">
+                            <span class="param-type">String</span>
+                        </td>
+                        <td class="description last"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <dl class="details">
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="EncryptionUtil.js.html">EncryptionUtil.js</a>, <a
+                                href="EncryptionUtil.js.html#line155">line 155</a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+                
+                <h4 class="name" id="verifying"><span class="type-signature"></span>verifying<span
+                    class="signature">(value, publicKey, signature)</span><span class="type-signature"> &rarr;
+                    {boolean}</span></h4>
+                    <div class="description">
+                        Function returns true if the private key used to create signature and the public key used to verify are part of same keypair of RSA. Here the verify() function of the crypto is used in the function.
+                    </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th class="last">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="name"><code>value</code></td>
+                        <td class="type">
+                            <span class="param-type">String</span>
+                        </td>
+                        <td class="description last"></td>
+                    </tr>
+                    <tr>
+                        <td class="name"><code>publicKey</code></td>
+                        <td class="type">
+                            <span class="param-type">String</span>
+                        </td>
+                        <td class="description last"></td>
+                    </tr>
+                    <tr>
+                        <td class="name"><code>signature</code></td>
+                        <td class="type">
+                            <span class="param-type">Buffer Object</span>
+                        </td>
+                        <td class="description last"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <dl class="details">
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="EncryptionUtil.js.html">EncryptionUtil.js</a>, <a
+                                href="EncryptionUtil.js.html#line181">line 181</a>
+                        </li>
+                    </ul>
+                </dd>
               
-
-
-
-
-
-
-
-
-
-
-
-
                 
-
-
-
-
-
-
-
                 </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 
-
-
-
-
-
-
-
-
-
-
-
-
-
             </article>
-
         </section>
-
-
-
-
     </div>
-
     <nav>
         <h2><a href="index.html">Home</a></h2>
         <h3>Features/Functions available</h3>
         <ul>
             <li><a href="global.html#base64Encode">Base64 Encode</a></li>
             <li><a href="global.html#base64Decode">Base64 Decode</a></li>
-
             <li><a href="global.html#generateAESKeyBase64">AES key generation</a></li>
             <li><a href="global.html#aesDecryptFromBase64">AES Decryption</a></li>
             <li><a href="global.html#aesEncryptToBase64">AES Encryption</a></li>
-
-
             <li><a href="global.html#generateRSAKeyPair">RSA key generation</a></li>
             <li><a href="global.html#_signSHA256RSA">Create RSA signatures</a></li>
             <li><a href="global.html#verifying">verifying RSA signatures</a></li>
@@ -1714,15 +483,11 @@
             <li><a href="global.html#rsaEncryptToBase64">RSA Encryption</a></li>
         </ul>
     </nav>
-
     <br class="clear">
-
     <footer>
         Code Documentation for CS682 - project-4b
     </footer>
-
     <script> prettyPrint(); </script>
     <script src="scripts/linenumber.js"> </script>
 </body>
-
 </html>
