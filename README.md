@@ -11,6 +11,7 @@ Welcome to the CS682-Project4b repository! This repository contains the code and
 
 ## Table of Contents
 - [Description](#description)
+- [Prerequisite](#prerequisite)
 - [Setup](#setup)
 - [Features](#features)
 - [Usage](#usage)
@@ -19,18 +20,36 @@ Welcome to the CS682-Project4b repository! This repository contains the code and
 ## Description
 
 In this project, we delve into the fascinating field of cryptography. We aim to build a module that can perform encryption and decryption of a string using different crypto algorithms namely: 
-      * RSA 2048 Encryption and Decryption
-      * AES CTR 256 Encrypt/Decrypt
-      * Base Encode and Decode
 
-To learn more about the project click on the documentation link below:
+* RSA 2048 Encryption and Decryption
+* AES CTR 256 Encrypt/Decrypt
+* Base Encode and Decode
+
+About The Project:
+* Language Used : Javascript
+* Built and Tested : <a href="https://nodejs.dev/en/">NodeJS</a>
+* Version of NodeJS: v18.14.0
+* Testing Framework Used: Mocha and Chai JavaScript test framework
+
+To learn more about the project click on the documentation link:
 <p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a></p>
 
 To get the Github link to the repository click the link below:
 <p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github Repository</a></p>
 
+## Prerequisite
 
-Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0 .
+* Download and Install NodeJS
+  * Download NodeJS Installer from the official website:   <a href="https://nodejs.org/en/download"> Node.js Website</a>
+  * Run the installer
+  * Test NodeJS by printing the version:
+      
+        node -v
+    
+   * Test npm by printing the version:
+          
+          npm -v
+   
 
 ## Setup
 
@@ -56,7 +75,7 @@ To run the code in this repository, please follow these steps:
 ## Features
       1. Base64 encode and decode data.
       2. Generate RSA key pairs for encryption and decryption.
-      3. Create and verify SHA256 RSA signatures.
+      3. Signing and Verification process in RSA.
       4. Encrypt and decrypt data using RSA encryption.
       5. Generate AES keys for encryption and decryption.
       6. Encrypt and decrypt data using AES encryption.
