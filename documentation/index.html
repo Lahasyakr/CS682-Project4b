@@ -85,9 +85,23 @@
 <body>
 
     <div id="main">
-        <img src="logos/atsign.png" alt="atsign">
-        <span style="margin-left: 40%;margin-top: 2%;"><img src="logos/umass.png" alt="umass"></span>
+        <p style="display: flow-root;">
+            <img style="float: left !important;" src="logos/atsign.png" alt="atsign"/>
+            <img style="float: right !important;" src="logos/umass.png" alt="umass">
+        </p>
+
+
+
+
+        <p>
         <h2 class="page-title">Encryption and Decryption - RSA, AES, and Base64 encode and decode using JavaScript</h2>
+
+        </p>
+
+
+
+
+
 
         <p>
         <h3><b>Overview</b></h3>
@@ -120,25 +134,26 @@
         </ol>
     </h3>
     </p>
-       
+
 
         <p>
         <h3><b>Available Features</b></h3>
         <h3>
             <ol>
-                <li>Base64 encode and decode data.</li>
-                <li>Generate RSA key pairs for encryption and decryption.</li>
-                <li>Encrypt and decrypt data using RSA encryption.</li>
-                <li>Signing and Verification process in RSA.</li>
-                <li>Generate AES keys for encryption and decryption.</li>
-                <li>Encrypt and decrypt data using AES encryption.</li>
+                <li><a href="global.html#base64Encode">Base64 encode and decode data.</a></li>
+                <li><a href="global.html#generateRSAKeyPair">Generate RSA key pairs for encryption and decryption.</a>
+                </li>
+                <li><a href="global.html#_signSHA256RSA">Signing and Verification process in RSA.</a></li>
+                <li><a href="global.html#rsaDecryptFromBase64">Encrypt and decrypt data using RSA encryption.</a></li>
+                <li><a href="global.html#generateAESKeyBase64">Generate AES keys for encryption and decryption.</a></li>
+                <li><a href="global.html#aesDecryptFromBase64">Encrypt and decrypt data using AES encryption.</a></li>
             </ol>
         </h3>
         </p>
 
         <p>
         <h3><b>Technologies used</b></h3>
-        <img src="logos/nodejs.png" alt="node"  width="150" height="100">
+        <img src="logos/nodejs.png" alt="node" width="150" height="100">
         <img src="logos/mocha.png" alt="Mocha">
         </p>
 
