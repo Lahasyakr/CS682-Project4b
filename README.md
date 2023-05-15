@@ -7,7 +7,7 @@
 
 ### CS682-Project4b 
 
-Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding.
+Welcome to the CS682-Project4b repository! This repository contains the code and resources for Project 4b of the CS682 course of Umass Boston. In this project, we have implemented module for encryption and decryption using RSA, AES, and Base64 encoding/decoding. The project can be used as a library to used in the javascript sdk for the Atsign company.
 
 ## Table of Contents
 - [Description](#description)
@@ -18,11 +18,16 @@ Welcome to the CS682-Project4b repository! This repository contains the code and
 
 ## Description
 
-In this project, we delve into the fascinating field of cryptography. We aim to build a module that can perform encryption and decryption of a string using different crypto algorithms.
+In this project, we delve into the fascinating field of cryptography. We aim to build a module that can perform encryption and decryption of a string using different crypto algorithms namely: 
+      * RSA 2048 Encryption and Decryption
+      * AES CTR 256 Encrypt/Decrypt
+      * Base Encode and Decode
 
-<p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">click here to go to the code documents web page</a></p>
+To learn more about the project click on the documentation link below:
+<p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a></p>
 
-<p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github link to the repository</a></p>
+To get the Github link to the repository click the link below:
+<p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github Repository</a></p>
 
 
 Our module is built and tested using <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0 .
