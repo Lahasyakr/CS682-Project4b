@@ -70,7 +70,6 @@ To run the code in this repository, please follow these steps:
          
          ............similarly all the functions can be accessed....................
          
-## License
 
 ## Affiliations 
 <p align="left">
@@ -78,7 +77,9 @@ To run the code in this repository, please follow these steps:
   <img align ="right" src="documentation/logos/umass.png">
 </p>
 
+## License
 This project is licensed under the [MIT License](LICENSE). 
+
 
 ---
 
