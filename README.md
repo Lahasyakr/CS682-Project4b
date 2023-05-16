@@ -27,14 +27,13 @@ In this project, we delve into the fascinating field of cryptography. We aim to 
 
 About The Project:
 * Language Used : Javascript
-* Built and Tested Language: <a href="https://nodejs.dev/en/">NodeJS</a>
-* Version of NodeJS: v18.14.0
-* Testing Framework Used: Mocha and Chai JavaScript test framework
+* Built and tested using : <a href="https://nodejs.dev/en/">Nodejs</a> v18.14.0</li>
+* Framework used for testing: <a href ="https://mochajs.org/">Mocha and Chai</a> JavaScript test framework
 
-To learn more about the project click on the documentation link below:
-<p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a></p>
+## To learn more about the project click on the documentation link below:
+## <p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a></p>
 
-To get the Github link to the repository click the link below:
+### To get the Github link to the repository click the link below:
 <p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github Repository</a></p>
 
 ## Prerequisite
