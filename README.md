@@ -31,7 +31,7 @@ About The Project:
 * Framework used for testing: <a href ="https://mochajs.org/">Mocha and Chai</a> JavaScript test framework
 
 ## To learn more about the project click on the documentation link below:
-## <p><a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a></p>
+## <a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">Documentation Web Page</a>
 
 ### To get the Github link to the repository click the link below:
 <p> <a href="https://github.com/Lahasyakr/CS682-Project4b"> Github Repository</a></p>
