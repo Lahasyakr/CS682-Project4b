@@ -1,4 +1,4 @@
-# <a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">CryptoLib</a></p>
+# <a href="https://lahasyakr.github.io/CS682-Project4b/documentation/index.html">CryptoLib</a>
 
 
 
